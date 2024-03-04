@@ -265,10 +265,10 @@ def play1():
         elif keys[pygame.K_RIGHT] and basket.x < 500 - basket.width - basket.vel:
             basket.x += basket.vel
         if keys[pygame.K_UP]:
-            if basket.y <= 20:
+            if basket.y > 20:
                 basket.y -= basket.vel
         elif keys[pygame.K_DOWN]:
-            if basket.y > 400:
+            if basket.y <= 400:
                 basket.y += basket.vel
         redrawGameWindow()
     pygame.display.update()
@@ -398,10 +398,10 @@ def play2():
         elif keys[pygame.K_RIGHT] and basket.x < 500 - basket.width - basket.vel:
             basket.x += basket.vel
         if keys[pygame.K_UP]:
-            if basket.y <= 20:
+            if basket.y > 20:
                 basket.y -= basket.vel
         elif keys[pygame.K_DOWN]:
-            if basket.y > 400:
+            if basket.y <= 400:
                 basket.y += basket.vel
         redrawGameWindow()
     pygame.display.update()
